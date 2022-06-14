@@ -11,12 +11,10 @@ yum makecache
 yum install ntp -y
 ntpdate ntp.aliyun.com
 hwclock -w
-echo "ok1------"
 yum install -y bash-completion
 yum install -y yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum makecache fast
-echo "ok2------"
 yum install -y docker-ce-3:19.03.9-3.el7.x86_64 docker-ce-cli containerd.io
 systemctl start docker
 systemctl enable docker
