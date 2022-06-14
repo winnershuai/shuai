@@ -8,7 +8,6 @@ systemctl disable firewalld
 curl -o /etc/yum.repos.d/CentOS-Base.repo https://mirrors.aliyun.com/repo/Centos-7.repo 
 yum clean all
 yum makecache 
-yum update
 yum install ntp -y
 ntpdate ntp.aliyun.com
 hwclock -w
