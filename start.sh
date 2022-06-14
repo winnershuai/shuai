@@ -1,5 +1,5 @@
 #!/bin/bash -e
-hostnamectl set-hostname k8s-01
+hostnamectl set-hostname $1
 echo "127.0.0.1 $(hostname)" >> /etc/hosts
 sed -i "s/^SELINUX=.*/SELINUX=disabled/" /etc/selinux/config 
 setenforce 0
